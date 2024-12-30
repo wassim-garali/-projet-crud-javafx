@@ -1,0 +1,23 @@
+/* adminPage.css */
+
+/* Style des boutons de navigation */
+.nav-button {
+    -fx-background-color: #34495e;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 14px;
+    -fx-padding: 10 15;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #3b5998;
+}
+
+/* Style de la zone de contenu */
+#contentArea {
+    -fx-background-color: #ecf0f1;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}

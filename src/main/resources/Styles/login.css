@@ -1,0 +1,66 @@
+/* Styles pour la page de login */
+.login_container {
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 20;
+}
+
+/* Logo Container */
+.login_logo_container {
+    -fx-background-color: #2c3e50;
+    -fx-alignment: center;
+    -fx-padding: 20;
+}
+
+/* Form Container */
+.login_form_container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+/* Labels */
+.form_label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* ChoiceBox, TextField, and PasswordField */
+.form_textfield, .form_choicebox {
+    -fx-pref-width: 250px;
+    -fx-padding: 5;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+/* Submit Button */
+.form_button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+/* Button hover effect */
+.form_button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Error Label */
+.error_label {
+    -fx-text-fill: red;
+    -fx-font-size: 12px;
+}
+
+/* Eye button for password visibility */
+.eye_button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 16px;
+}

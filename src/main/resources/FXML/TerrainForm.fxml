@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<VBox xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet.Controllers.TerrainFormController" spacing="15.0" style="-fx-padding: 20; -fx-background-color: #f0f0f0;">
+    <Label text="Nom du terrain" />
+    <TextField fx:id="nomField" promptText="Entrez le nom" />
+
+    <Label text="Type de terrain" />
+    <TextField fx:id="typeField" editable="false" promptText="Entrez le type" />
+
+    <Label text="Prix" />
+    <TextField fx:id="prixField" promptText="Entrez le prix" />
+
+    <Label text="Ville" />
+    <TextField fx:id="villeField" promptText="Entrez la ville" />
+
+    <HBox spacing="10">
+        <Button fx:id="saveButton" text="Enregistrer" onAction="#handleSaveButton" style="-fx-background-color: #2ECC71; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5; -fx-padding: 10;" />
+        <Button fx:id="cancelButton" text="Annuler" onAction="#handleCancelButton" style="-fx-background-color: #E74C3C; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5; -fx-padding: 10;" />
+    </HBox>
+</VBox>

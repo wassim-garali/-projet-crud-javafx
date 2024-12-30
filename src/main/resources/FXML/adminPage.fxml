@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="528.0" prefWidth="932.0" style="-fx-background-color: #f0f0f0; -fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet.Controllers.AdminPageController">
+    <HBox fx:id="menuArea" alignment="TOP_LEFT" prefHeight="490.0" prefWidth="892.0" spacing="20" style="-fx-padding: 10; -fx-background-color: #ffffff;">
+        <VBox fx:id="menu" prefHeight="430.0" prefWidth="290.0" spacing="15.0" style="-fx-padding: 20; -fx-background-color: #2C3E50; -fx-border-radius: 10; -fx-background-radius: 10;">
+            <!-- Section utilisateur -->
+            <VBox alignment="CENTER" spacing="15" style="-fx-padding: 10 0;">
+                <ImageView fx:id="userIcon" fitHeight="60" fitWidth="60" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/userIcon.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Label fx:id="usernameLabel" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #ECF0F1;" text="Welcome Wassim" />
+            </VBox>
+            <!-- Boutons du menu avec icônes et couleurs ajustées -->
+            <Button fx:id="homeButton" onAction="#handleHomeButton" prefWidth="250" style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5; -fx-padding: 10;">
+                <graphic>
+                    <ImageView fitHeight="20" fitWidth="20" translateX="-50.0">
+                        <image>
+                            <Image url="@../Images/homeIcon.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                Home
+            </Button>
+            <Button fx:id="footButton" onAction="#handleFootButton" prefWidth="250" style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5; -fx-padding: 10;">
+                <graphic>
+                    <ImageView fitHeight="20" fitWidth="20" translateX="-23.0">
+                        <image>
+                            <Image url="@../Images/footIcon.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                Terrain de Foot
+            </Button>
+            <Button fx:id="basketButton" onAction="#handleBasketButton" prefWidth="250" style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5; -fx-padding: 10;">
+                <graphic>
+                    <ImageView fitHeight="20" fitWidth="20" translateX="-18.0">
+                        <image>
+                            <Image url="@../Images/basketIcon.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                Terrain de Basket
+            </Button>
+            <Button fx:id="tennisButton" onAction="#handleTennisButton" prefWidth="250" style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5; -fx-padding: 10;">
+                <graphic>
+                    <ImageView fitHeight="20" fitWidth="20" translateX="-20.0">
+                        <image>
+                            <Image url="@../Images/tennisIcon.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                Terrain de Tennis
+            </Button>
+        </VBox>
+
+        <!-- Partie centrale de contenu -->
+        <VBox fx:id="contentArea" prefHeight="430.0" prefWidth="600.0" spacing="20" style="-fx-padding: 20;">
+            <HBox spacing="15" style="-fx-alignment: center-left;">
+                <Button fx:id="addButton" disable="true" onAction="#handleAddButton" style="-fx-background-color: #2ECC71; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5; -fx-padding: 10; -fx-min-width: 100px;" text="Ajouter">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20">
+                            <image>
+                                <Image url="@../Images/addIcon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+               <HBox.margin>
+                  <Insets right="60.0" />
+               </HBox.margin>
+                </Button>
+                <Button fx:id="updateButton" disable="true" onAction="#handleUpdateButton" style="-fx-background-color: #F39C12; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5; -fx-padding: 10; -fx-min-width: 100px;" text="Modifier">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20">
+                            <image>
+                                <Image url="@../Images/editIcon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+               <HBox.margin>
+                  <Insets right="60.0" />
+               </HBox.margin>
+                </Button>
+                <Button fx:id="deleteButton" disable="true" onAction="#handleDeleteButton" style="-fx-background-color: #E74C3C; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5; -fx-padding: 10; -fx-min-width: 100px;" text="Supprimer">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20">
+                            <image>
+                                <Image url="@../Images/deleteIcon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </HBox>
+
+            <TableView fx:id="terrainTable" prefWidth="600.0">
+                <columns>
+                    <TableColumn fx:id="nomColumn" prefWidth="150.0" text="Nom" />
+                    <TableColumn fx:id="typeColumn" prefWidth="150.0" text="Type" />
+                    <TableColumn fx:id="prixColumn" prefWidth="100.0" text="Prix" />
+                    <TableColumn fx:id="villeColumn" prefWidth="150.0" text="Ville" />
+                </columns>
+            </TableView>
+        </VBox>
+    </HBox>
+</VBox>

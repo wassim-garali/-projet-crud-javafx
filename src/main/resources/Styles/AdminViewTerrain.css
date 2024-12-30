@@ -1,0 +1,87 @@
+/* Style global */
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* Style pour la TableView */
+.table-view {
+    -fx-border-color: #ddd;
+    -fx-border-width: 1;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER;
+}
+
+/* Style pour les colonnes de la TableView */
+.table-column {
+    -fx-alignment: CENTER;
+    -fx-font-weight: bold;
+}
+
+/* Style pour les lignes de la table */
+.table-row-cell {
+    -fx-background-color: #f9f9f9;
+}
+
+/* Style pour la colonne de nom des terrains */
+.table-view .column-name {
+    -fx-text-fill: #2c3e50;
+}
+
+/* Style pour les boutons d'action */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-border-radius: 5;
+    -fx-padding: 5px 10px;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Style pour les boutons de modification et suppression */
+.hbox {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+}
+
+/* Style du champ de recherche */
+.text-field {
+    -fx-background-color: #ecf0f1;
+    -fx-padding: 10px;
+    -fx-border-radius: 5;
+    -fx-border-color: #ccc;
+}
+
+.text-field:focused {
+    -fx-border-color: #3498db;
+}
+
+/* Style pour le label du formulaire */
+.label {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+/* Style pour le formulaire de recherche */
+.search-container {
+    -fx-padding: 20px;
+    -fx-background-color: #ecf0f1;
+    -fx-alignment: center;
+    -fx-spacing: 15px;
+}
+
+/* Style du titre de la page */
+.form-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+    -fx-padding-bottom: 20px;
+}
+
+/* Style du conteneur principal */
+.vbox {
+    -fx-padding: 20px;
+}
